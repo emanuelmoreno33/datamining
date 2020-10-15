@@ -1,0 +1,13 @@
+# Unit 1
+## [examples](../examples)
+⋅⋅* [For loop](../examples/forLoop.R)
+⋅⋅* [Functions](../examples/functions.R)
+⋅⋅* [If](../examples/ifStatement.R)
+⋅⋅* [Variables](../examples/variables.R)
+⋅⋅* [Vectorized operations](../examples/vectorizedOperations.R)
+⋅⋅* [Vectors](../examples/vectors.R)
+⋅⋅* [Loop While](../examples/whileLoop.R)
+## [practices](../practices)
+⋅⋅* [Practice 1](../practices/practice1.R)
+⋅⋅* [Practice 2](../practices/practice2.R)
+⋅⋅* [Practice 3](../practices/practice_3.R)
