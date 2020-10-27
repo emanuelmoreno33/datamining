@@ -12,4 +12,4 @@
 * [Practice 2](./practices/practice2.R)
 * [Practice 3](./practices/practice_3.R)
 ## [Exam](./exam)
-* [Explain](./examples/Readme.md)
+* [Explain](./exam/Readme.md)
