@@ -11,3 +11,5 @@
 * [Practice 1](./practices/practice1.R)
 * [Practice 2](./practices/practice2.R)
 * [Practice 3](./practices/practice_3.R)
+## [Exam](./exam)
+* [Explain](./examples/Readme.md)
