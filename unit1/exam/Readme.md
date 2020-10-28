@@ -171,3 +171,27 @@ rm(dataset_2013,dataset_life_expectancy_2013)
 
 The reason why the datasets are kept separate is because the problem indicates that you want to see two plots, the one from 1960 and the one from 2013, so it is easier to do this separation and then perform the plot.
 
+We create the plot vector corresponding to the year 1960, we specify the axes, the design of the points, we group the regions by colors and assign a title
+```R
+plot1960 <- qplot(data = merged_1960, x = Fertility.Rate, y = Life_Expectancy_1960,
+                  color = Region, size=I(3), shape=I(19), alpha =I(.4), 
+                  main = "Fertility Rate vs Life Expectancy in 1960 by Country")
+```
+
+We create the plot vector corresponding to the year 1960, we specify the axes, the design of the points, we group the regions by colors and assign a title
+```R
+plot2013 <- qplot(data = merged_2013, x = Fertility.Rate, y = Life_Expectancy_2013,
+                  color = Region, size=I(3), shape=I(19), alpha =I(.4), 
+                  main = "Fertility Rate vs Life Expectancy in 2013 by Country")
+```
+
+We remove excess information from Data
+```R
+rm(merged_1960,merged_2013)
+```
+
+we execute the plot vectors to visualize the information
+```R
+plot1960
+plot2013
+```
