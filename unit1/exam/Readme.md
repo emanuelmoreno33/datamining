@@ -202,5 +202,5 @@ the 2013 plot is like this
 
 ![2013 plot](./plot2013.png)
 
-## Conclusion
+## Conclusion 
 They are noticeable contrasts, we are talking about 52 years of difference between the graphs, so it is easy to notice the changes, however we can notice changes of each color, that is, of each region that has its own trend, a couple of examples with The ones that we can identify very opposite cases are Europe and Africa, in which Europe has always had a tendency of high life expectancy and low reproduction, while Africa has low life expectancy and the highest reproduction rate, all this in 1960, while in 2012 it followed the same upward trend towards low reproduction and low life expectancy respectively.
