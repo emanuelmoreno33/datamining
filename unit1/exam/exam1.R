@@ -43,3 +43,18 @@ head(merged_2013)
 #remove the information to clear data
 rm(dataset_2013,dataset_life_expectancy_2013)
 
+
+#We create the plot vector corresponding to the year 1960, we specify the axes, the design of the points, we group the regions by colors and assign a title
+plot1960 <- qplot(data = merged_1960, x = Fertility.Rate, y = Life_Expectancy_1960,
+                  color = Region, size=I(3), shape=I(19), alpha =I(.4), 
+                  main = "Fertility Rate vs Life Expectancy in 1960 by Country")
+#We create the plot vector corresponding to the year 1960, we specify the axes, the design of the points, we group the regions by colors and assign a title
+plot2013 <- qplot(data = merged_2013, x = Fertility.Rate, y = Life_Expectancy_2013,
+                  color = Region, size=I(3), shape=I(19), alpha =I(.4), 
+                  main = "Fertility Rate vs Life Expectancy in 2013 by Country")
+#We remove excess information from Data
+rm(merged_1960,merged_2013)
+
+#we execute the plot vectors to visualize the information
+plot1960
+plot2013
