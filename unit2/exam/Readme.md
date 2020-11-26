@@ -180,7 +180,16 @@ library(ggplot2)
 ```
 #because this program was made in Linux, you need to indicate the font that will be used.
 ```R
-windowsFonts(Comic=windowsFont("Comic Sans MS"))
+install.packages("extrafont")
+library(extrafont)
+extrafont::font_import()
+
+fonts(Comic=windowsFont("Comic Sans MS"))
+fonts <- list(
+  sans =font_import("Comic Sans MS"),
+  mono = font_import("Consolas"),
+  `Times New Roman` = font_import("DejaVu Serif")
+)
 ```
 u is assigned to graph the dataset we filter, as well as to take the X axis to the genre of the film and the Y axis to gross sales.
 ```R
@@ -194,9 +203,16 @@ hj <- u +  geom_jitter(shape=20,aes(color=Studio, size=Budget)) + geom_boxplot(a
 Finally, aesthetic arrangements are made to the graph, adding the labels of the XY axis, title, and the theme that these letters will have, indicating what color, font and size will be the labels, title and texts of the graph.
 ```R
 hj + xlab("Genre") +
-ylab("Gross % US") +
-ggtitle("Domestic Gross % by Genre") +
-theme(axis.title.x = element_text(color = "Purple", size=30),axis.title.y = element_text(color = "Purple", size=30),axis.title = element_text(family = "Comic"),axis.text.x = element_text(size = 20),axis.text.y = element_text(size = 20),axis.text = element_text(family = "Comic"),plot.title = element_text(color = "Black",size = 25,family = "Comic" ))
+  ylab("Gross % US") +
+  ggtitle("Domestic Gross % by Genre") +
+theme(axis.title.x = element_text(color = "Purple", size=30),
+      axis.title.y = element_text(color = "Purple", size=30),
+      axis.title = element_text(family = "sans"),
+      axis.text.x = element_text(size = 20),
+      axis.text.y = element_text(size = 20),
+      axis.text = element_text(family = "sans"),
+      plot.title = element_text(color = "Black",
+                                size = 25,family = "sans" ))
 
 ```
 
