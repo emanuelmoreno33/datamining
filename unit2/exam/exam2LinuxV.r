@@ -33,7 +33,7 @@ rm(movies,dataset_movies,dataset_filter_genere)
 
 #se llama a la libreria ggplot2 que nos permitira graficar.
 library(ggplot2)
-#debido a que se realizo en windows este programa, se necesita indicar la fuente que se usara.
+#debido a que se realizo en Linux este programa, se necesita indicar la fuente que se usara.
 install.packages("extrafont")
 library(extrafont)
 extrafont::font_import()
