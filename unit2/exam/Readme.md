@@ -122,9 +122,88 @@ ggtitle("Domestic Gross % by Genre") +
 theme(axis.title.x = element_text(color = "Purple", size=30),axis.title.y = element_text(color = "Purple", size=30),axis.title = element_text(family = "Comic"),axis.text.x = element_text(size = 20),axis.text.y = element_text(size = 20),axis.text = element_text(family = "Comic"),plot.title = element_text(color = "Black",size = 25,family = "Comic" ))
 
 ```
+## Code explain in Linux Version
+The only thing that changes in Linux is the URL of the .csv file and the use of the text source
+First, you must modify the path where you will work so that it is more convenient to call the csv file.
+
+``` R
+getwd()
+setwd("D:\Usuarios\Emanuel\Documentos\github\datamining\unit2\exam")
+getwd()
+```
+csv file is read and assigned to movies.
+```R
+movies <- read.csv("Project-Data.csv")
+```
+
+the first data is shown to see how the csv is created.
+```R
+head(movies)
+```
+
+A dataframe is created with the Genre, Budget, Gross and Studio columns, in order to later filter the data that will be used.
+
+```R
+dataset_movies <- data.frame(Genere = movies$Genre,Budget = movies$Budget...mill.,Gross = movies$Gross...US,Studio=movies$Studio)
+```
+The first data from the dataset we just created is displayed.
+```R
+head(dataset_movies)
+```
+We call this library that will allow us to create filters more easily.
+```R
+library(dplyr)
+```
+A dataset is created that stores the data filtered by genre of the previously created dataset, having to be action, adventure, animation, comedy and drama.
+```R
+dataset_filter_genere <- filter(dataset_movies, dataset_movies$Genere == 'action' | dataset_movies$Genere == 'adventure' | dataset_movies$Genere == 'animation' | dataset_movies$Genere == 'comedy' | dataset_movies$Genere== 'drama')
+```
+The first data is displayed to see that the filter has worked.
+```R
+head(dataset_filter_genere)
+```
+Another dataset is created that now filters the previously filtered dataset to filter now by studio, being from Buena Vista Studios, Fox, Paramount Pictures, Sony, Universal and WB.
+```R
+dataset_filter_studio <-filter(dataset_filter_genere,dataset_filter_genere$Studio == 'Buena Vista Studios'|dataset_filter_genere$Studio == 'Fox'|dataset_filter_genere$Studio == 'Paramount Pictures'|dataset_filter_genere$Studio == 'Sony'|dataset_filter_genere$Studio == 'Universal'|dataset_filter_genere$Studio == 'WB')
+```
+The first data of the last filtered dataset is displayed.
+```R
+head(dataset_filter_studio)
+```
+The datasets created for the first filters and the original dataset are cleaned up to save space.
+```R
+rm(movies,dataset_movies,dataset_filter_genere)
+```
+The ggplot2 library is called, which will allow us to plot.
+```R
+library(ggplot2)
+```
+#because this program was made in Linux, you need to indicate the font that will be used.
+```R
+windowsFonts(Comic=windowsFont("Comic Sans MS"))
+```
+u is assigned to graph the dataset we filter, as well as to take the X axis to the genre of the film and the Y axis to gross sales.
+```R
+u <- ggplot(dataset_filter_studio, aes(x=Genere, y=Gross))
+```
+After the previous assignment, now hj is assigned the u which is the one that contains the information to be plotted to draw the graph of points indicating that small points should be placed, the studies by color and their size by box office, as well as add a box plot that is 0.6 transparent, so we can see the points.
+```R
+hj <- u +  geom_jitter(shape=20,aes(color=Studio, size=Budget)) + geom_boxplot(alpha=0.6,outlier.shape = NA)
+```
+
+Finally, aesthetic arrangements are made to the graph, adding the labels of the XY axis, title, and the theme that these letters will have, indicating what color, font and size will be the labels, title and texts of the graph.
+```R
+hj + xlab("Genre") +
+ylab("Gross % US") +
+ggtitle("Domestic Gross % by Genre") +
+theme(axis.title.x = element_text(color = "Purple", size=30),axis.title.y = element_text(color = "Purple", size=30),axis.title = element_text(family = "Comic"),axis.text.x = element_text(size = 20),axis.text.y = element_text(size = 20),axis.text = element_text(family = "Comic"),plot.title = element_text(color = "Black",size = 25,family = "Comic" ))
+
+```
+
 The Graph is this:
 
 ![R graphic](Rplot.png)
+
 
 ## Conclusion
 You can see that in the action genre is where there is more money, although the 300 million is not always generated, the studio that produces the most is Paramount, Sony and WB, in addition to that the income of the United States is between 30 and 50%.
