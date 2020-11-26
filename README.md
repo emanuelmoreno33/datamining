@@ -1,6 +1,5 @@
 # datamining
 
-<<<<<<< Updated upstream
 This is the folders of Unit 1
 =======
 This is the folders of Unit 1, the explanation is in each readme of each folder
@@ -13,4 +12,3 @@ This is the folders of Unit 1, the explanation is in each readme of each folder
 
 1. [exam](./unit2/exam)
 2. [research](./unit2/research)
->>>>>>> Stashed changes
