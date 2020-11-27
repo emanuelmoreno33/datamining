@@ -21,3 +21,6 @@ Coordinates - Describes the plot space you are using.
 The theme layer allows you to design with a particular visual identity using fonts, colors and other design elements.
 
 ![Grammar of Graphics](grammarofgraphics.png)
+
+# References
+Think About the Grammar of Graphics When Improving Your Graphs. (2020). Retrieved 9 November 2020, from https://medium.com/tdebeus/think-about-the-grammar-of-graphics-when-improving-your-graphs-18e3744d8d18
