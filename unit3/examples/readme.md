@@ -518,7 +518,7 @@ plot(classifier)
 text(classifier, cex=0.6)
 ```
 
-#Random Forest
+# Random Forest
 ```R
 getwd()
 setwd("C:/Users/Hp/Downloads/DataMining-master/MachineLearning/RandomForest")
@@ -612,7 +612,7 @@ Choosing the number of trees
 plot(classifier)
 ```
 
-#SVM
+# SVM
 
 Importing the dataset
 ```R
