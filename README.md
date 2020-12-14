@@ -9,3 +9,10 @@ This is the folders of Unit 2, the explanation is in each readme of each folder
 1. [exam](./unit2/exam)
 2. [research](./unit2/research)
 3. [practice](./unit2/practice)
+
+
+## Unit 3
+
+1. [exam](./unit3/exam)
+2. [practice](./unit3/practice)
+3. [examples](./unit3/examples)
