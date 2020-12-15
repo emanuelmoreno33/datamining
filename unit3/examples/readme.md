@@ -59,6 +59,7 @@ ggtitle( 'Salary vs Experience (Training Set)' ) +
 xlab( 'Years of experience' ) +
 ylab( 'Salary' )
  ```
+ ![Training_set](./images/training_simple)
  
 Now the same is done for the test dataset, in this case the points will be
 extracted from the test dataset, while the line will remain from the test dataset training.
@@ -73,6 +74,7 @@ ggtitle( 'Salary vs Experience (Test Set)' ) +
 xlab( 'Years of experience' ) +
 ylab( 'Salary' )
 ```
+![Training_set](./images/test_simple)
 
 # Multiple Linear Regression
 
@@ -292,6 +294,7 @@ main = 'Logistic Regression (Training set)' ,
 xlab = 'Age' , ylab = 'Estimated Salary' ,
 xlim = range(X1), ylim = range(X2))
 ```
+
 Limits indicating a region are plotted in contour mode
 ```R
 contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add
@@ -303,6 +306,8 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
+![Training_set](./images/Logistic_Training)
+
 The same is done but now with the training data, only the dataset is changed to the test one.
 ```R
 library (ElemStatLearn)
@@ -323,6 +328,7 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
+![Test_set](./images/test)
 # KNN
 K-Nearest-Neighbor is a Machine Learning supervised type instance-based algorithm. It can be used to classify new samples (discrete values) or to predict (regression, continuous values).
 
@@ -406,6 +412,9 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
+![Training_set](./images/training_knn)
+
+
 To view with the test dataset, the same procedure is performed
 ```R
 library (ElemStatLearn)
@@ -426,6 +435,7 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
+![Test_set](./images/test_knn)
 
 # Decision Tree Classification
 ```R
@@ -494,6 +504,8 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
+![Training_set](./images/training_dt)
+
 
 Visualising the Test set results
 ```R
@@ -511,13 +523,14 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
+![Test_set](./images/test_dt)
 
 Plotting the tree
 ```R
 plot(classifier)
 text(classifier, cex=0.6)
 ```
-
+![Decision Tree](./images/arbol)
 # Random Forest
 ```R
 getwd()
@@ -590,6 +603,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
+![Training_set](./images/training_random)
 
 Visualising the Test set results
 ```R
@@ -611,6 +625,7 @@ Choosing the number of trees
 ```R
 plot(classifier)
 ```
+![Test_set](./images/test_random)
 
 # SVM
 
@@ -680,6 +695,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
+![Training_set](./images/training_svm)
 
 Visualising the Test set results
 ```R
@@ -697,6 +713,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
+![Test_set](./images/test_svm)
 
 # K-Means
 ```R
@@ -748,3 +765,4 @@ clusplot(dataset,
          ylab = 'Spending Score')
          
 ```
+![plot K-means](./images/kmeans)
