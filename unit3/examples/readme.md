@@ -59,7 +59,7 @@ ggtitle( 'Salary vs Experience (Training Set)' ) +
 xlab( 'Years of experience' ) +
 ylab( 'Salary' )
  ```
- ![Training_set](./images/training_simple)
+ ![Training_set](./images/training_simple.png)
  
 Now the same is done for the test dataset, in this case the points will be
 extracted from the test dataset, while the line will remain from the test dataset training.
@@ -74,7 +74,7 @@ ggtitle( 'Salary vs Experience (Test Set)' ) +
 xlab( 'Years of experience' ) +
 ylab( 'Salary' )
 ```
-![Training_set](./images/test_simple)
+![Training_set](./images/test_simple.png)
 
 # Multiple Linear Regression
 
@@ -306,7 +306,7 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
-![Training_set](./images/Logistic_Training)
+![Training_set](./images/Logistic_Training.png)
 
 The same is done but now with the training data, only the dataset is changed to the test one.
 ```R
@@ -328,7 +328,7 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
-![Test_set](./images/test)
+![Test_set](./images/test.png)
 # KNN
 K-Nearest-Neighbor is a Machine Learning supervised type instance-based algorithm. It can be used to classify new samples (discrete values) or to predict (regression, continuous values).
 
@@ -412,7 +412,7 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
-![Training_set](./images/training_knn)
+![Training_set](./images/training_knn.png)
 
 
 To view with the test dataset, the same procedure is performed
@@ -435,7 +435,7 @@ points(grid_set, pch = '.' , col = ifelse(y_grid == 1 , 'springgreen3' ,
 'tomato' ))
 points(set, pch = 21 , bg = ifelse(set[, 3 ] == 1 , 'green4' , 'red3' ))
 ```
-![Test_set](./images/test_knn)
+![Test_set](./images/test_knn.png)
 
 # Decision Tree Classification
 ```R
@@ -504,7 +504,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
-![Training_set](./images/training_dt)
+![Training_set](./images/training_dt.png)
 
 
 Visualising the Test set results
@@ -523,14 +523,14 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
-![Test_set](./images/test_dt)
+![Test_set](./images/test_dt.png)
 
 Plotting the tree
 ```R
 plot(classifier)
 text(classifier, cex=0.6)
 ```
-![Decision Tree](./images/arbol)
+![Decision Tree](./images/arbol.png)
 # Random Forest
 ```R
 getwd()
@@ -603,7 +603,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
-![Training_set](./images/training_random)
+![Training_set](./images/training_random.png)
 
 Visualising the Test set results
 ```R
@@ -625,7 +625,7 @@ Choosing the number of trees
 ```R
 plot(classifier)
 ```
-![Test_set](./images/test_random)
+![Test_set](./images/test_random.png)
 
 # SVM
 
@@ -695,7 +695,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
-![Training_set](./images/training_svm)
+![Training_set](./images/training_svm.png)
 
 Visualising the Test set results
 ```R
@@ -713,7 +713,7 @@ contour(X1, X2, matrix(as.numeric(y_grid), length(X1), length(X2)), add = TRUE)
 points(grid_set, pch = '.', col = ifelse(y_grid == 1, 'springgreen3', 'tomato'))
 points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 ```
-![Test_set](./images/test_svm)
+![Test_set](./images/test_svm.png)
 
 # K-Means
 ```R
@@ -765,4 +765,4 @@ clusplot(dataset,
          ylab = 'Spending Score')
          
 ```
-![plot K-means](./images/kmeans)
+![plot K-means](./images/kmeans.png)
