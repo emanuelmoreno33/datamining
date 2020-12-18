@@ -138,3 +138,4 @@ clusplot(dataset,
 Giving the following result:
 ![Plot of clusters](cluster.jpg)
 ### Conclusion
+With respect to the resulting graph, we can observe by means of K-Means, when recognizing similar data according to the type of plants they belong to, and through the similarities of sizes of petals and strains we can see that in the case of groups 1 and 2 share many similarities, it can be said that 50% of each belongs to the union of both groups, unlike group 3 that remains isolated from the others, only plant number 42 is on the edge but it is not enough to even get close to the other groups.
